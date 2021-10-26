@@ -14,7 +14,9 @@ function generateJoke() {
             'Accept': 'application/json'
         }
     }
-    fetch('https://icanhazdadjoke.com', config).then(response => response.json()).then((data) => {
+    fetch('https://icanhazdadjoke.com', config)
+    .then(response => response.json())
+    .then((data) => {
         jokeEl.innerHTML = data.joke
     });
 }
